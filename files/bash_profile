@@ -1,0 +1,11 @@
+for file in bash_prompt exports aliases functions; do
+  file="$HOME/.$file"
+  [ -e "$file" ] && source "$file"
+done
+
+
+
+
+
+
+

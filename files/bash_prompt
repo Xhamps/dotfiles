@@ -1,3 +1,30 @@
+function proml {
+  local        BLUE="\[\033[0;34m\]"
+  local         RED="\[\033[0;31m\]"
+  local   LIGHT_RED="\[\033[1;31m\]"
+  local       GREEN="\[\033[0;32m\]"
+  local LIGHT_GREEN="\[\033[1;32m\]"
+  local       WHITE="\[\033[1;37m\]"
+  local  LIGHT_GRAY="\[\033[0;37m\]"
+
+  case $TERM in
+    xterm*)
+    TITLEBAR='\[\033]0;\u@\hw\007\]'
+    ;;
+    *)
+    TITLEBAR=""
+    ;;
+  esac
+
+  svn info | grep '^URL:' | egrep -o '(tags|branches)/[^/]+|trunk' | egrep -o '[^/]+$'
+
+  PS1="${TITLEBAR}\
+  $RED\w $GREEN\$(parse_git_branch)\$(parse_svn_branch)\
+  $WHITE\$ "
+  PS2='> '
+  PS4='+ '
+}
+
 proml
 
 export CLICOLOR=1

@@ -16,10 +16,9 @@ function proml {
     ;;
   esac
 
-  svn info | grep '^URL:' | egrep -o '(tags|branches)/[^/]+|trunk' | egrep -o '[^/]+$'
 
   PS1="${TITLEBAR}\
-  $RED\w $GREEN\$(parse_git_branch)\$(parse_svn_branch)\
+  $RED\w $GREEN\$(parse_git_branch)\
   $WHITE\$ "
   PS2='> '
   PS4='+ '

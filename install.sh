@@ -5,6 +5,7 @@ cp files/exports ~/.exports
 cp files/bash_profile ~/.bash_profile
 cp files/gitconfig ~/.gitconfig
 cp files/gitignore ~/.gitignore
+cp files/tmux.conf ~/.tmux.conf
 
 mkdir -p ~/.bash/bin/
 

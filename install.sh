@@ -10,6 +10,7 @@ cp files/tmux.conf ~/.tmux.conf
 mkdir -p ~/.bash/bin/
 
 curl http://www.paulhammond.org/2009/03/webkit2png-0.5/webkit2png-0.5.txt > ~/.bash/bin/webkit2png
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.bash/bin/git-completion.bash
 chmod +x ~/.bash/bin/webkit2png
 
 source ~/.bash_profile
